@@ -1,11 +1,7 @@
 import BoxHeader from "@/components/BoxHeader";
 import DashboardBox from "@/components/DashboardBox";
 import FlexBetween from "@/components/FlexBetween";
-import {
-  useGetKpisQuery,
-  useGetProductsQuery,
-  useGetTransactionsQuery,
-} from "@/state/api";
+import {useGetKpisQuery} from "@/state/api";
 import { Box, Typography, useTheme } from "@mui/material";
 import { DataGrid, GridCellParams } from "@mui/x-data-grid";
 import React, { useMemo } from "react";
@@ -16,8 +12,6 @@ const Row3 = () => {
   const pieColors = [palette.primary[800], palette.primary[500]];
 
   const { data: kpiData } = useGetKpisQuery();
-  const { data: productData } = useGetProductsQuery();
-  const { data: transactionData } = useGetTransactionsQuery();
 
   const pieChartData = useMemo(() => {
     if (kpiData) {
@@ -87,7 +81,7 @@ const Row3 = () => {
 
   return (
     <>
-      <DashboardBox gridArea="g">
+      {/* <DashboardBox gridArea="g">
         <BoxHeader
           title="List of Products"
           sideText={`${productData?.length} products`}
@@ -203,7 +197,7 @@ const Row3 = () => {
           molestie volutpat et. Malesuada quis pretium aliquet lacinia ornare
           sed. In volutpat nullam at est id cum pulvinar nunc.
         </Typography>
-      </DashboardBox>
+      </DashboardBox> */}
     </>
   );
 };
