@@ -45,7 +45,9 @@ const Row2 = () => {
       )
     );
   }, [operationalData]);
-
+return(
+  <></>
+)
 //   const productExpenseData = useMemo(() => {
 //     return (
 //       productData &&
