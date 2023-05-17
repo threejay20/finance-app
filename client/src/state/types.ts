@@ -44,9 +44,18 @@ export interface GetProductsResponse {
     price:number;
     expense: number;
     transactions: Array<string>;
-    monthlyData: Array<Month>;
-    dailyData: Array<Day>;
     createdAt: string;
     updateAt: string;
 
+}
+
+export interface GetTransactionsResponse {
+    id: string;
+    _id:string;
+    __v: number;
+    buyer:number;
+    amount: number;
+    productIds: Array<string>;
+    createdAt: string;
+    updateAt: string;
 }

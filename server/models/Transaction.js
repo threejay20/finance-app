@@ -11,10 +11,8 @@ const TransactionSchema = new Schema (
      {
             
             buyer: {
-                type: mongoose.Types.Currency,
-                currency: "CDN",
-                get: (v) => v / 100
-
+                type:String,
+                required: true,
             },
             amount: {
                 type: mongoose.Types.Currency,
